@@ -1,0 +1,65 @@
+/* milk, white, dark.html을 다루는 css입니다 */
+
+body{
+    width: 700px;
+    height: 400px;
+    margin: 10px auto;
+}
+/* 폭 700px, 높이 400px의 창을 만들었습니다. 마진 속성으로 가운데 정렬을 해 주었습니다. */
+
+.main{
+  display: grid;
+  grid-template-areas:"c1 c2";
+  grid-template-columns: 50%/50%;
+  border: 5px solid orange;
+  border-radius: 5px;
+  font-family: 'Jua', sans-serif;
+}
+/* 그리드 메인 설정 */
+
+#mid{
+  text-align: center;
+  background-color: orange;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid black;
+  margin:0 auto;
+  margin-bottom: 5px;
+  font-family: 'Jua', sans-serif;
+}
+/* 중간에 넣는 h1태그의 값입니다. 각각 어느 초콜릿인지 나타내는 글씨를 꾸몄습니다.*/
+
+img{
+  width: 300px;
+  height: auto;
+}
+/* 사진 설정  폭은 300px이며 높이는 깨지지 않도록 auto로 하였습니다.*/
+
+.info{
+  border-bottom: 1px solid orange;
+  margin: 0px;
+  font-family: 'Jua', sans-serif;
+}
+/* '상세정보'글씨를 포함하는 div태그의 클래스입니다. */
+
+.milk1{
+  grid-area: c1;
+  border: 1px solid orange;
+  padding: 5px;
+  margin: 5px;
+  font-family: 'Jua', sans-serif;
+}
+
+.milk2{
+  grid-area: c2;
+  border: 1px solid orange;
+  padding: 5px;
+  margin: 5px;
+  font-family: 'Jua', sans-serif;
+}
+/* 서로 다른 제품 두 개의 그리드를 지정해주었습니다. 위 두 개의 클래스는 각각 다른 그리드를 가지고 있으며, 위치를 제외하면 동일한 스타일을 가집니다 */
+
+.milk1>h2, .milk2>h2{
+  color: orange;
+}
+/* 그리드 내의 h2태그 색상을 변경했습니다. */

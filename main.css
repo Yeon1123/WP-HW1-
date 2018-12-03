@@ -1,0 +1,162 @@
+.grid_main{
+  height: 1000px;
+  width: 1500px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 50px;
+  border: 4px solid orange;
+  grid-template-areas: "header header header"
+                       "login article council"
+                       "nav article council"
+                       "footer footer footer";
+
+  padding: 10px;
+  margin: 0 auto;
+  grid-gap: 10px;
+}
+/* 전체 그리드를 나타내는 css입니다. 총 3x4의 레이아웃을 작성하였습니다. 폭과 높이는 지정해주었으며, 그리드 속성을 함께 주었습니다 */
+
+#mainhead{
+  font-family: 'Jua', sans-serif;
+  grid-area: header;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  background-color: orange;
+  padding-top:60px;
+  margin: 0px;
+  text-decoration: none;
+}
+/* 맨 윗칸, h1을 나타내는 코드.입니다. header그리드를 차지하며, 폰트색상과 크기, 배경색을 나타냈습니다. a태그를 이용해서 작성하였으므로 밑줄을 없애기 위해 text-decoration은 none속성을 주었습니다.*/
+
+#login{
+  grid-area:login;
+  border: 1px solid black;
+  height: 150px;
+  padding: 10px;
+  font-family: 'Jua', sans-serif;
+}
+/* 로그인창의 그리드 위치를 지정해주었으며 폰트, 창의 크기, padding과 테두리선을 그렸습니다. */
+
+#login>input[type="submit"]{
+  background-color: #FFBB00;
+  border: none;
+  border-radius: 7px;
+  height: 60px;
+  width:70px;
+  position: relative;
+  left: 130px;
+  top: -100px;
+  font-family: 'Jua', sans-serif;
+}
+/* 로그인창의 제출 버튼의 속성입니다. 색상, 모양, 크기를 지정했으며 아이디 입력창의 옆으로 가도록 위치를 지정해주었습니다. */
+
+.line1{
+    color: gray;
+    font-family: 'Jua', sans-serif;
+}
+
+.line1 > a{
+  position: relative;
+  left: 40px;
+  color: gray;
+  font-family: 'Jua', sans-serif;
+  text-decoration: none;
+}
+/* 로그인창에서 회원가입, 자동로그인의 설정입니다. 글씨 색은 회색이며 클래스 내 a태그의 위치를 지정해 회원가입 문자를 옆으로 이동시켰습니다. 링크 밑줄도 삭제하였습니다. */
+
+/* 로그인 그리드 종료*/
+
+nav{
+  border: 1px solid black;
+  grid-area:nav;
+}
+/* 다음은 메뉴 칸입니다. 메뉴 전체에 주어진 그리드에 테두리 선을 그렸으며 그리드 위치는 nav입니다. */
+
+.dropbtn {
+    background-color: orange;
+    border: 1px solid white;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+}
+/* 해당 클래스의 메뉴 폰트, 색상, 테두리선, 크기를 모두 지정해줍니다. block속성을 가지고 있습니다.  메인 메뉴의 초콜릿, 부자재, 사탕류에 적용됩니다.*/
+
+.dropdown {
+    position: relative;
+    display: block;
+    font-family: 'Jua', sans-serif;
+}
+/* 초콜릿, 초콜릿의 서브메뉴/ 부자재, 부자재의 서브메뉴/ 사탕류, 사탕류의 서브메뉴 를 해당 클래스의 div로 각각 분할했습니다. 위치 속성을 주었습니다. */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    left:120px;
+    top:-1px;
+
+}
+/* 서브메뉴 속성입니다. display:none으로 평소에는 보이지 않습니다. 만약 보이게 될 경우의 배경색, 박스 석성, 위치를 지정해줍니다. */
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    background-color: #f1f1f1;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+}
+/* 서브메뉴의 a태그(실제로 글씨가 쓰인 영역)의 속성입니다. block속성을 가지므로 주어진 박스 전체를 클릭할 수 있으며 배경색상, 글씨 위치등을 작성했습니다. 링크의 밑줄을 삭제했습니다.*/
+/* line-height값이 높이값과 같으면 글씨는 높이 기준의 가운데 정렬이 적용됩니다. */
+
+.dropdown-content a:hover {background-color: #ddd;}
+/* 서브메뉴에 마우스가 올라간 경우 배경색을 변환합니다. */
+.dropdown:hover .dropdown-content {display: block;}
+/* 드롭다운 클래스에 마우스가 올라갈 경우 그 서브메뉴가 보입니다. */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+/* 드롭다운 클래스(메인메뉴)에 마우스가 올라갈 경우 메인메뉴의 배경색을 바꿉니다. */
+
+/* 메뉴 그리드 종료*/
+
+.article{
+  grid-area: article;
+  border: 1px solid black;
+}
+/* iframe창의 css입니다. 그리드를 지정했고 테두리 선을 작성했습니다. */
+
+
+.council{
+  grid-area: council;
+  border: 1px solid black;
+  padding: 5px;
+  font-family: 'Jua', sans-serif;
+}
+/* 상담 조건의 그리드 위치를 정해주었고 마찬가지로 테두리 선, 패딩 속성, 글씨체를 변경하였습니다 */
+
+.footer{
+  grid-area: footer;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  border: 1px solid black;
+  text-align: center;
+  font-family: 'Jua', sans-serif;
+  padding:10px;
+}
+/* 화면 맨 아래칸의 그리드를 지정했습니다. 본인의 학번을 입력하였으며, 기울기를 주었고 크기는 10px,텍스트 가운데 모음과 폰트 및 테두리 속성을 주었습니다. */

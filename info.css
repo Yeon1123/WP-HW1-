@@ -1,0 +1,76 @@
+/* dove1 2 3, her1 2 3의 html에 동일하게 적용되는 css파일입니다. */
+body {
+  border: 5px solid orange;
+  margin: 40px auto;
+  width: 800px;
+  border-radius: 5px;
+}
+
+/* body태그, 즉 주어진 칸 800px에 맞게 테두리 선을 주었습니다. 창의 정 가운데로 정렬했습니다. radius로 선에 곡선을 지정. */
+.choco {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(300px, auto) minmax(100px, auto) 50px;
+  grid-template-areas: "image explain1"
+    "name explain2"
+    "b1   b2";
+  grid-gap: 10px;
+  padding: 5px;
+}
+/* 그리드 컨테이너 클래스입니다. 2x3의 그리드를 만들었으며 각각 자리는 이름으로 설정했습니다. 그리드 사이는 10px 띄웠습니다. */
+
+.image {
+  grid-area: image;
+  border: 3px solid orange;
+}
+/* image클래스의 그리드 위치를 지정한 뒤 테두리 선을 그렸습니다. */
+
+.name {
+  border: 3px solid orange;
+  grid-area: name;
+  color: orange;
+  font-size: 40px;
+  padding: 10px auto;
+  font-family: 'Jua', sans-serif;
+}
+/* name 클래스의 위치를 지정해주었습니다. 글씨 크기는 40px이며 padding속성을 주어 글씨를 가운데로 이동시켰습니다. */
+
+.explain1 {
+  grid-area: explain1;
+  border: 3px solid orange;
+  font-family: 'Jua', sans-serif;
+  padding-top: 50px;
+}
+/* 상품 설명(칼로리 등)을 설명하는 그리드입니다. 마찬가지로 padding속성, 글씨폰트, 테두리 선을 지정해주었습니다. */
+
+.explain2 {
+  grid-area: explain2;
+  border: 3px solid orange;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Jua', sans-serif;
+  padding-bottom: 5px;
+}
+/* 초콜릿에 대한 설명이 나타난 두번째 그리드입니다.  */
+
+.buy {
+  grid-area: b1;
+}
+
+.cart {
+  grid-area: b2;
+}
+/* 위 두 클래스의 그리드 위치를 선정하였습니다. 각각 상품 구매, 장바구니 버튼입니다. 자세한 위치, 글씨 크기 조정등은 아래 코드에 작성하였습니다. */
+
+input[type="button"] {
+  border: 3px solid orange;
+  margin-left: 35px;
+  margin-top: 10px;
+  background-color: #FFBB00;
+  border: none;
+  border-radius: 7px;
+  width: 100px;
+  height: 40px;
+}
+/* 버튼 속성을 가진 모든 html에 적용됩니다. 버튼 색상, 모양, 크기를 지정했으며 위치를 옮겨주었습니다. */

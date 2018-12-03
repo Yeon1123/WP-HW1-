@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>chocolate-shop</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+</head>
+<!-- 판매 사이트의 창 이름을 설정하였습니다. css파일을 불러왔으며 같은 폴더에 존재하므로 링크도 간단합니다. -->
+
+<body>
+
+  <div class="grid_main">
+
+    <h1 id="mainhead">
+      <a href="main.html" id="mainhead">Chocolate</a></h1>
+
+    <form class="" action="main.html" method="post">
+      <div id="login">
+        <p>로그인<p>
+            <p><input type="text" name="id" placeholder="아이디" style="width:100px;"></p>
+            <p><input type="password" name="pswd" placeholder="비밀번호" style="width:100px;"></p>
+            <!-- 아이디, 비밀번호를 입력할 수 있는 입력창을 만들었습니다. 입력창 내에 디폴트로 작성되는 글씨는 placeholder속성을 이용했으며 이는 클릭시 사라집니다. -->
+            <div class="line1">
+              <input type="checkbox" name="자동로그인" value="자동로그인">자동로그인
+              <a href="#"> 회원가입</a>
+              <!-- 자동로그인과 회원가입을 위한 코드입니다. 체크박스는 클릭까지만 가능하며, 회원가입을 누르면 이어진 링크가 없으므로 아직 아무 영향이 없습니다. -->
+            </div>
+
+
+            <input type="submit" value="로그인" onclick="alert('로그인되었습니다.')">
+            <!-- 클릭시 로그인되었습니다 창이 뜨도록 하는 코드입니다. 제출 방식은 post이며 버튼에는 로그인이라는 글씨가 작성됩니다. -->
+      </div>
+    </form>
+
+    <nav>
+      <!-- 판매 상품 목록을 나타냅니다. 각 항목별 dropdown div태그로 묶어주었으며 하위메뉴를 나타내기 위해 다시 div태그로 묶어주었습니다.-->
+      <h1 id="menu_name"> <img src="m1.png" width="30px" height="30px" id=image1>sold </h1>
+
+      <div class="dropdown">
+        <a href="chocolate.html" class="dropbtn" target="click">초콜릿</a>
+        <div class="dropdown-content">
+          <a href="milk.html" target="click">milk</a>
+          <a href="dark.html" target="click">dark</a>
+          <a href="white.html" target="click">white</a>
+          <!-- target을 주어 클릭시 연결된 링크가 새창으로 뜨는것이 아니라 iframe으로 지정된 화면에 뜨도록 하였습니다. -->
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" target="click">부자재</a>
+        <div class="dropdown-content">
+          <a href="#">상자</a>
+          <a href="#">리본</a>
+          <a href="#">포장지</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" class="dropbtn" target="click">사탕류</a>
+        <div class="dropdown-content">
+          <a href="#">푸딩</a>
+          <a href="#">젤리</a>
+          <a href="#">마카롱</a>
+        </div>
+      </div>
+
+    </nav>
+    <!-- 여기까지가 목록을 나타내는 html입니다. -->
+
+    <div class="article">
+      <iframe src="chocolate.html" width="100%" height="100%" name='click'></iframe>
+    </div>
+    <!-- article에 주어진 그리드 내에 새창을 띄우도록 했습니다. click target인 링크를 누르면 연결된 새창을 그리드 내에 띄워줍니다.  -->
+
+    <div class="council">
+      <form class="c" action="index.html" method="post">
+        <!-- 고객 상담 코너입니다. 텍스트를 입력할 수 있는 창을 만들었으며 전송 방식은 post입니다. -->
+        <p>고객 상담</p>
+        <input type="text" name="" value="이곳에 내용을 입력해주세요">
+        <input type="submit" name="" value="보내기">
+      </form>
+    </div>
+
+
+    <div class="footer">
+      <p>201602204_유정연_과제</p>
+    </div>
+    <!-- 마지막 하단의 이름을 작성하였습니다. -->
+
+  </div>
+</body>

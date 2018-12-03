@@ -1,0 +1,14 @@
+*{
+  margin: 0;padding: 0;
+}
+
+.nav a{
+  display: block;
+  width : 100px;
+  height: 40px;
+  background-color: orange;
+  line-height: 40px;
+  color: white;
+ text-decoration: none;
+
+}
